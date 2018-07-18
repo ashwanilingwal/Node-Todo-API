@@ -1,22 +1,20 @@
-var mongoose=require('mongoose');
+var mongoose = require('mongoose');
 
-mongoose.Promise=global.Promise;
-mongoose.connect('mongodb://localhost:27017/TodoApp');
-var Todo=mongoose.model('Todo',
-{
-  text:{
+var Todo = mongoose.model('Todo', {
+  text: {
     type: String,
-    required:true,
-    minlength:1,
-    trim:true
+    required: true,
+    minlength: 1,
+    trim: true
   },
-  completed:{
+  completed: {
     type: Boolean,
-    default:false
+    default: false
   },
-  completedAt :{
-      type: Number,
-      default:null
+  completedAt: {
+    type: Number,
+    default: null
   }
 });
-module.exports={Todo};
+
+module.exports = {Todo};
