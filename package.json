@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+  "prestart": "next build",
+  "start": "next start -p ${PORT}",
     "start": "node server/server.js",
     "test": "mocha server/**/*.test.js"
   },
